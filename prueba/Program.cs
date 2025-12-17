@@ -120,6 +120,8 @@ class Program
             Console.WriteLine("3. Agregar Moto");
             Console.WriteLine("4. Agregar Bicicleta");
             Console.WriteLine("5. Agregar Camion");
+            Console.WriteLine("6. Listar Vehiculos");
+            Console.WriteLine("7. Calcular Recaudacion Diaria");
             Console.Write("Opción");
             opcion = int.Parse(Console.ReadLine());
 
