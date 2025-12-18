@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prueba;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,21 @@ namespace prueba
             }
 
             return total;
+        }
+
+        internal void AgregarVehiculo(camion ca)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void AgregarVehiculo(bicicleta b)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void AgregarVehiculo(Auto a)
+        {
+            throw new NotImplementedException();
         }
     }
 

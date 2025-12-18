@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prueba;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace prueba
         public string Materialcuadro { get; set; }
 
         public const decimal TARIFA = 200;
+        internal int id;
+        internal string? Dueño;
 
         public override decimal ObtenerCostoDiario()
         {

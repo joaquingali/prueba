@@ -1,110 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
-abstract class Vehiculo
-{
-    public int Id { get; set; }
-    public string Dueño { get; set; }
-
-    public abstract decimal ObtenerCostoDiario();
-}
-
-
-class Auto : Vehiculo
-{
-    public int CantidadPuertas { get; set; }
-    public string Combustible { get; set; }
-
-    public const decimal TARIFA = 1000;
-
-    public override decimal ObtenerCostoDiario()
-    {
-        return TARIFA;
-    }
-}
-
-class camioneta : Vehiculo
-{
-    public string capacidadCarga { get; set; }
-    public string Sies4x4 { get; set; }
-
-    public const decimal TARIFA = 1500;
-
-    public override decimal ObtenerCostoDiario()
-    {
-        return TARIFA;
-    }
-}
-
-class moto : Vehiculo
-{
-    public string tipo { get; set; }
-    public string cilindrada { get; set; }
-
-    public const decimal TARIFA = 600;
-
-    public override decimal ObtenerCostoDiario()
-    {
-        return TARIFA;
-    }
-}
-
-class bicicleta: Vehiculo
-{
-    public string  tipo { get; set; }
-    public string Materialcuadro { get; set; }
-
-    public const decimal TARIFA = 200;
-
-    public override decimal ObtenerCostoDiario()
-    {
-        return TARIFA;
-    }
-}
-
-class camion : Vehiculo
-{
-    public int cantEJES { get; set; }
-    public string cargaMaxima { get; set; }
-
-    public const decimal TARIFA =2500;
-
-    public override decimal ObtenerCostoDiario()
-    {
-        return TARIFA;
-    }
-}
-
-class Estacionamiento
-{
-    private List<Vehiculo> vehiculos = new List<Vehiculo>();
-
-    public void AgregarVehiculo(Vehiculo v)
-    {
-        vehiculos.Add(v);
-    }
-
-    public void ListarVehiculos()
-    {
-        Console.WriteLine(" vehiculos estacionados ");
-        foreach (Vehiculo v in vehiculos)
-        {
-            Console.WriteLine($"ID: {v.Id} | Dueño: {v.Dueño} | Costo Diario: ${v.ObtenerCostoDiario()}");
-        }
-    }
-
-    public decimal CalcularRecaudacionDiaria()
-    {
-        decimal total = 0;
-
-        foreach (Vehiculo v in vehiculos)
-        {
-            total += v.ObtenerCostoDiario(); 
-        }
-
-        return total;
-    }
-}
+using System.Runtime.InteropServices;
+using prueba;
+using Prueba;
 
 class Program
 {
@@ -165,13 +63,14 @@ class Program
                     m.tipo = (Console.ReadLine());
                     Console.Write("indique la cilindrada: ");
                     m.cilindrada = Console.ReadLine();
+                    moto m1 = m;
                     est.AgregarVehiculo(m);
                     break;
 
                 case 4:
                     bicicleta b = new bicicleta();
                     Console.Write("ID: ");
-                    b.Id = int.Parse(Console.ReadLine());
+                    b.id = int.Parse(Console.ReadLine());
                     Console.Write("Dueño: ");
                     b.Dueño = Console.ReadLine();
                     Console.Write("indique el tipo: ");
